@@ -84,10 +84,10 @@ public class AvatarDAO {
                         String caractere = String.valueOf(obj.get("caractere"));
                         String message = String.valueOf(obj.get("message"));
                         String requete = String.valueOf(obj.get("requete"));
-                        Double humeur = (Double)(obj.get("humeur"));
-                        Double attention = (Double)(obj.get("attention"));
-                        Double pa = (Double)(obj.get("pa"));
-                        Double img = (Double)(obj.get("img"));
+                        Double humeur = Double.parseDouble(String.valueOf(obj.get("humeur")));
+                        Double attention = Double.parseDouble(String.valueOf(obj.get("attention")));
+                        Double pa = Double.parseDouble(String.valueOf(obj.get("pa")));
+                        Double img = Double.parseDouble(String.valueOf(obj.get("img")));
                         
                         ct1=new Avatar(id, nom, user, gout, caractere, message, requete, humeur, attention, pa, img);
                         a++;
